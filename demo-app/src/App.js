@@ -20,7 +20,7 @@ function App() {
     console.log("value", value);
 
     try {
-      const response = await fetch("http://localhost:4000/products/add", {
+      const response = await fetch("http://54.208.252.214:4000/products/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ function App() {
 
   const getAllProducts = async () => {
     try {
-      const response = await fetch("http://localhost:4000/products/get");
+      const response = await fetch("http://54.208.252.214:4000/products/get");
       const result = await response.json();
       console.log(result.data);
       setProducts(result.data);
